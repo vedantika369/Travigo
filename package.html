@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travigo | Tour Packages</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f8fb;
+color:#333;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 3px 12px rgba(0,0,0,.12);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#00a6c7;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover,
+.active{
+color:#00a6c7;
+}
+
+.hero{
+height:55vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+margin-top:75px;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+max-width:850px;
+line-height:1.8;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:70px auto;
+}
+
+.title{
+text-align:center;
+font-size:38px;
+color:#00a6c7;
+margin-bottom:15px;
+}
+
+.subtitle{
+text-align:center;
+margin-bottom:50px;
+color:#666;
+font-size:18px;
+}
+
+.packages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+gap:30px;
+}
+
+.card{
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.4s;
+opacity:0;
+transform:translateY(60px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.content{
+padding:25px;
+}
+
+.content h2{
+color:#0097a7;
+margin-bottom:12px;
+}
+
+.duration{
+display:inline-block;
+background:#00bcd4;
+color:#fff;
+padding:8px 18px;
+border-radius:30px;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.content p{
+line-height:1.8;
+margin-bottom:18px;
+}
+
+.content ul{
+margin-left:20px;
+line-height:2;
+margin-bottom:20px;
+}
+
+.price{
+font-size:28px;
+font-weight:700;
+color:#e91e63;
+margin-bottom:18px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 28px;
+background:#0097a7;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#007d8c;
+}
+
+.features{
+margin-top:70px;
+background:#fff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.features h2{
+text-align:center;
+color:#00a6c7;
+margin-bottom:25px;
+}
+
+.feature-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.feature{
+background:#f4f8fb;
+padding:20px;
+border-radius:15px;
+text-align:center;
+font-weight:500;
+transition:.3s;
+}
+
+.feature:hover{
+background:#00bcd4;
+color:white;
+}
+
+.custom{
+margin-top:70px;
+background:linear-gradient(135deg,#00bcd4,#0097a7);
+color:white;
+padding:50px;
+border-radius:20px;
+text-align:center;
+}
+
+.custom h2{
+margin-bottom:20px;
+font-size:35px;
+}
+
+.custom p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.custom button{
+padding:15px 35px;
+border:none;
+background:white;
+color:#0097a7;
+font-size:18px;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+font-weight:600;
+}
+
+.custom button:hover{
+transform:scale(1.05);
+}
+
+footer{
+margin-top:70px;
+background:#023047;
+color:white;
+text-align:center;
+padding:35px;
+line-height:2;
+}
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+padding:15px;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Travigo</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="destinations.html">Destinations</a></li>
+
+<li><a href="packages.html" class="active">Packages</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Choose Your Perfect Tour</h1>
+
+<p>
+
+Discover travel packages designed for every type of traveler.
+Whether you're looking for a short getaway, an adventure-filled trip,
+or a luxury vacation, Travigo has the perfect package for you.
+
+</p>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<h2 class="title">Our Tour Packages</h2>
+
+<p class="subtitle">
+
+Find the perfect package for your dream vacation.
+
+</p>
+
+<div class="packages">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80">
+
+<div class="content">
+
+<h2>Weekend Escape</h2>
+
+<span class="duration">2 Days / 1 Night</span>
+
+<p>
+
+Perfect for quick vacations and relaxing weekend breaks with family or friends.
+
+</p>
+
+<ul>
+
+<li>Comfortable Hotel Stay</li>
+
+<li>Breakfast</li>
+
+<li>Local Sightseeing</li>
+
+<li>Transportation</li>
+
+<li>Tour Guide</li>
+
+</ul>
+
+<div class="price">₹4,999</div>
+
+<a href="#" class="btn">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80">
+
+<div class="content">
+
+<h2>Adventure Package</h2>
+
+<span class="duration">5 Days / 4 Nights</span>
+
+<p>
+
+Designed for thrill seekers who love outdoor adventures and nature.
+
+</p>
+
+<ul>
+
+<li>Trekking</li>
+
+<li>Camping</li>
+
+<li>River Rafting</li>
+
+<li>Adventure Activities</li>
+
+<li>Accommodation</li>
+
+<li>Local Guide</li>
+
+</ul>
+
+<div class="price">₹14,999</div>
+
+<a href="#" class="btn">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80">
+
+<div class="content">
+
+<h2>Family Holiday</h2>
+
+<span class="duration">6 Days / 5 Nights</span>
+
+<p>
+
+A perfect package for families to enjoy a fun-filled and relaxing vacation together.
+
+</p>
+
+<ul>
+
+<li>Premium Hotel Stay</li>
+
+<li>Daily Breakfast & Dinner</li>
+
+<li>Guided Sightseeing</li>
+
+<li>Transportation</li>
+
+<li>Airport Pickup</li>
+
+<li>Family Activities</li>
+
+</ul>
+
+<div class="price">₹19,999</div>
+
+<a href="#" class="btn">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80">
+
+<div class="content">
+
+<h2>Cultural Heritage Tour</h2>
+
+<span class="duration">4 Days / 3 Nights</span>
+
+<p>
+Explore India's rich history, magnificent architecture, and vibrant traditions through carefully planned heritage destinations.
+</p>
+
+<ul>
+<li>Hotel Accommodation</li>
+<li>Guided Heritage Tours</li>
+<li>Entry Tickets to Major Attractions</li>
+<li>Transportation</li>
+<li>Breakfast</li>
+</ul>
+
+<div class="price">₹16,999</div>
+
+<a href="#" class="btn">Book Now</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80">
+
+<div class="content">
+
+<h2>Premium Luxury Tour</h2>
+
+<span class="duration">7 Days / 6 Nights</span>
+
+<p>
+Experience the finest travel with luxury accommodations, private transportation, and personalized services.
+</p>
+
+<ul>
+<li>5-Star Hotel Stay</li>
+<li>Private Cab</li>
+<li>Luxury Dining</li>
+<li>Professional Tour Guide</li>
+<li>Airport Transfers</li>
+<li>Premium Sightseeing</li>
+</ul>
+
+<div class="price">₹39,999</div>
+
+<a href="#" class="btn">Book Now</a>
+
+</div>
+
+</div>
+
+</div>
+
+<section class="features">
+
+<h2>Why Book with Travigo?</h2>
+
+<div class="feature-list">
+
+<div class="feature">Affordable & Transparent Pricing</div>
+
+<div class="feature">Carefully Planned Itineraries</div>
+
+<div class="feature">Comfortable Accommodation</div>
+
+<div class="feature">Experienced Tour Guides</div>
+
+<div class="feature">Safe & Reliable Transportation</div>
+
+<div class="feature">24/7 Customer Support</div>
+
+<div class="feature">Easy Online Booking</div>
+
+<div class="feature">Customized Travel Plans</div>
+
+</div>
+
+</section>
+
+<section class="custom">
+
+<h2>Need a Custom Package?</h2>
+
+<p>
+
+Can't find the package you're looking for?
+
+Our travel experts can create a personalized itinerary based on your destination,
+budget, and travel preferences.
+
+</p>
+
+<button id="customBtn">
+
+Customize Your Trip
+
+</button>
+
+</section>
+
+</div>
+
+<footer>
+
+<h2>Travigo Travel Website</h2>
+
+<p>
+Designed by <strong>Vedantika Deshmukh</strong>
+</p>
+
+<p>
+Arvind Gavali College of Engineering, Satara
+</p>
+
+<p>
+Date: 29 June 2026
+</p>
+
+<p>
+© 2026 Travigo. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{threshold:0.2});
+
+cards.forEach((card)=>{
+
+observer.observe(card);
+
+});
+
+document.querySelectorAll(".btn").forEach((btn)=>{
+
+btn.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+alert("Thank you for choosing Travigo!\n\nYour booking request has been received.");
+
+});
+
+});
+
+document.getElementById("customBtn").addEventListener("click",()=>{
+
+alert("Our travel experts will help you create a personalized travel package based on your destination, budget, and travel preferences.");
+
+});
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>50){
+
+header.style.boxShadow="0 8px 20px rgba(0,0,0,.15)";
+
+}
+
+else{
+
+header.style.boxShadow="0 3px 12px rgba(0,0,0,.12)";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

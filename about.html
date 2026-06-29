@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travigo | About Us</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f8fc;
+color:#333;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#00a8c6;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover,
+.active{
+color:#00a8c6;
+}
+
+.hero{
+height:55vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1502920917128-1aa500764ce7?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+margin-top:75px;
+padding:20px;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+max-width:800px;
+line-height:1.8;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:70px auto;
+}
+
+.about{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:40px;
+align-items:center;
+margin-bottom:70px;
+}
+
+.about img{
+width:100%;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.about-text{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.about-text.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.about-text h2{
+color:#00a8c6;
+margin-bottom:20px;
+font-size:36px;
+}
+
+.about-text p{
+line-height:2;
+font-size:17px;
+margin-bottom:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-bottom:60px;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.box.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.box:hover{
+background:#00bcd4;
+color:white;
+transform:translateY(-10px);
+}
+
+.box h3{
+margin-bottom:15px;
+}
+
+.trust{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.trust h2{
+text-align:center;
+color:#00a8c6;
+margin-bottom:30px;
+}
+
+.list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.item{
+background:#f4f8fb;
+padding:20px;
+text-align:center;
+border-radius:12px;
+font-weight:600;
+transition:.3s;
+}
+
+.item:hover{
+background:#00bcd4;
+color:white;
+}
+
+footer{
+margin-top:70px;
+background:#023047;
+color:white;
+text-align:center;
+padding:35px;
+line-height:2;
+}
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+padding:15px;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Travigo</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="destinations.html">Destinations</a></li>
+<li><a href="packages.html">Packages</a></li>
+<li><a href="about.html" class="active">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>About Travigo</h1>
+
+<p>
+
+Founded with a passion for travel, Travigo is committed to helping people explore the world's most beautiful destinations comfortably and affordably.
+
+</p>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d880?auto=format&fit=crop&w=900&q=80">
+
+<div class="about-text">
+
+<h2>Who We Are</h2>
+
+<p>
+
+Founded with a passion for travel, Travigo is committed to helping people explore the world's most beautiful destinations comfortably and affordably.
+
+</p>
+
+<p>
+
+Our mission is to make travel simple, enjoyable, and memorable for everyone.
+
+Whether you're traveling with family, friends, or alone, our dedicated team ensures every journey is carefully planned from start to finish.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="box">
+
+<h3>Our Mission</h3>
+
+<p>
+
+To provide affordable, safe, and unforgettable travel experiences while delivering exceptional customer satisfaction.
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>Our Vision</h3>
+
+<p>
+
+To become one of India's most trusted travel companies by offering world-class travel services and innovative holiday packages.
+
+</p>
+
+</div>
+
+</div>
+
+<section class="trust">
+
+<h2>Why Travelers Trust Us</h2>
+
+<div class="list">
+
+<div class="item">✔ 5+ Years of Experience</div>
+
+<div class="item">✔ Thousands of Happy Travelers</div>
+
+<div class="item">✔ Affordable Pricing</div>
+
+<div class="item">✔ Professional Tour Guides</div>
+
+<div class="item">✔ Secure Online Booking</div>
+
+<div class="item">✔ 24/7 Customer Support</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+<h2>Travigo Travel Website</h2>
+
+<p>Designed by <strong>Vedantika Deshmukh</strong></p>
+
+<p>Arvind Gavali College of Engineering, Satara</p>
+
+<p>Date: 29 June 2026</p>
+
+<p>© 2026 Travigo. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{threshold:0.2});
+
+document.querySelectorAll(".about-text,.box").forEach((el)=>{
+
+observer.observe(el);
+
+});
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>50){
+
+header.style.boxShadow="0 8px 20px rgba(0,0,0,.15)";
+
+}else{
+
+header.style.boxShadow="0 4px 12px rgba(0,0,0,.1)";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

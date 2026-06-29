@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travigo | Contact Us</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f8fc;
+color:#333;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#00a8c6;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover,
+.active{
+color:#00a8c6;
+}
+
+.hero{
+height:50vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+margin-top:75px;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:19px;
+max-width:700px;
+line-height:1.8;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:70px auto;
+}
+
+.contact-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.info,
+.form-box{
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.info h2,
+.form-box h2{
+color:#00a8c6;
+margin-bottom:25px;
+}
+
+.info p{
+margin-bottom:18px;
+line-height:1.8;
+}
+
+.info strong{
+color:#0097a7;
+}
+
+form input,
+form select,
+form textarea{
+
+width:100%;
+padding:14px;
+margin-bottom:18px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+
+}
+
+textarea{
+resize:none;
+height:140px;
+}
+
+button{
+
+width:100%;
+padding:15px;
+background:#0097a7;
+color:white;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+background:#007b87;
+}
+
+.social{
+margin-top:60px;
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.social h2{
+color:#00a8c6;
+margin-bottom:25px;
+}
+
+.icons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.icon{
+
+padding:15px 30px;
+background:#f4f8fb;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+cursor:pointer;
+
+}
+
+.icon:hover{
+
+background:#00bcd4;
+color:white;
+
+}
+
+footer{
+
+margin-top:70px;
+background:#023047;
+color:white;
+text-align:center;
+padding:35px;
+line-height:2;
+
+}
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+padding:15px;
+
+}
+
+nav ul{
+
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.contact-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Travigo</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="destinations.html">Destinations</a></li>
+
+<li><a href="packages.html">Packages</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html" class="active">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Contact Travigo</h1>
+
+<p>
+
+We would love to help you plan your next adventure.
+
+</p>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="contact-wrapper">
+
+<div class="info">
+
+<h2>Contact Information</h2>
+
+<p><strong>Address</strong></p>
+
+<p>
+
+Travigo Travel Services<br>
+
+123 Tourism Plaza<br>
+
+Satara, Maharashtra – 415001
+
+</p>
+
+<p>
+
+<strong>Phone</strong><br>
+
++91 98765 43210
+
+</p>
+
+<p>
+
+<strong>Email</strong><br>
+
+info@travigo.com
+
+</p>
+
+<p>
+
+<strong>Working Hours</strong><br>
+
+Monday – Saturday<br>
+
+9:00 AM – 7:00 PM
+
+</p>
+
+<p>
+
+Sunday<br>
+
+10:00 AM – 4:00 PM
+
+</p>
+
+</div>
+
+<div class="form-box">
+
+<h2>Contact Form</h2>
+
+<form id="contactForm">
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<input
+type="tel"
+placeholder="Phone Number"
+required>
+
+<select required>
+
+<option value="">Select Destination</option>
+
+<option>Mahabaleshwar</option>
+
+<option>Goa</option>
+
+<option>Ladakh</option>
+
+<option>Ajanta & Ellora</option>
+
+<option>Kerala</option>
+
+</select>
+
+<textarea
+placeholder="Type your travel inquiry"
+required></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<section class="social">
+
+<h2>Follow Us</h2>
+
+<div class="icons">
+
+<div class="icon">Facebook</div>
+
+<div class="icon">Instagram</div>
+
+<div class="icon">YouTube</div>
+
+<div class="icon">X (Twitter)</div>
+
+<div class="icon">LinkedIn</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+<h2>Travigo Travel Website</h2>
+
+<p>
+Thank you for choosing Travigo. We look forward to making your next journey unforgettable.
+</p>
+
+<br>
+
+<p><strong>Designed by</strong></p>
+
+<p>Vedantika Deshmukh</p>
+
+<p>Arvind Gavali College of Engineering, Satara</p>
+
+<p>Date: 29 June 2026</p>
+
+<br>
+
+<p>&copy; 2026 Travigo. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+// Scroll Animation
+
+const elements=document.querySelectorAll(".info,.form-box,.social");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.2
+});
+
+elements.forEach((el)=>{
+
+observer.observe(el);
+
+});
+
+// Contact Form
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Thank you for contacting Travigo!\n\nYour message has been sent successfully. Our travel experts will contact you soon.");
+
+this.reset();
+
+});
+
+// Header Shadow Effect
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>50){
+
+header.style.boxShadow="0 8px 20px rgba(0,0,0,.18)";
+
+}else{
+
+header.style.boxShadow="0 4px 12px rgba(0,0,0,.1)";
+
+}
+
+});
+
+// Social Button Click
+
+const social=document.querySelectorAll(".icon");
+
+social.forEach((icon)=>{
+
+icon.addEventListener("click",()=>{
+
+alert("Follow Travigo on " + icon.innerText);
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

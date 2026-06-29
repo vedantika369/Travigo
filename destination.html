@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travigo | Destinations</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f9fc;
+color:#333;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#00a8c6;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:28px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover,
+nav ul li .active{
+color:#00a8c6;
+}
+
+.hero{
+height:55vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+padding:20px;
+margin-top:70px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:19px;
+max-width:760px;
+line-height:1.8;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:70px auto;
+}
+
+.section-title{
+text-align:center;
+font-size:38px;
+color:#00a8c6;
+margin-bottom:15px;
+}
+
+.section-subtitle{
+text-align:center;
+font-size:18px;
+margin-bottom:50px;
+color:#666;
+}
+
+.destination{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+background:#fff;
+padding:25px;
+margin-bottom:45px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.4s;
+opacity:0;
+transform:translateY(60px);
+}
+
+.destination.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.destination:hover{
+transform:translateY(-8px);
+}
+
+.destination img{
+width:100%;
+height:330px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.destination h2{
+color:#0097a7;
+margin-bottom:15px;
+}
+
+.destination p{
+line-height:1.8;
+margin-bottom:18px;
+}
+
+.destination ul{
+margin-left:22px;
+line-height:2;
+margin-bottom:20px;
+}
+
+.time{
+display:inline-block;
+background:#00bcd4;
+color:#fff;
+padding:10px 18px;
+border-radius:30px;
+font-weight:600;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 28px;
+background:#0097a7;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#007b87;
+}
+
+footer{
+background:#023047;
+color:#fff;
+text-align:center;
+padding:35px;
+line-height:2;
+margin-top:60px;
+}
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+padding:15px;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.destination{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Travigo</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="destinations.html" class="active">Destinations</a></li>
+<li><a href="packages.html">Packages</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Explore Amazing Destinations</h1>
+
+<p>
+Find your perfect destination from India's most loved tourist places.
+Experience breathtaking landscapes, rich culture, historical wonders,
+and unforgettable adventures with Travigo.
+</p>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<h2 class="section-title">Popular Tourist Destinations</h2>
+
+<p class="section-subtitle">
+Choose your next unforgettable journey with Travigo.
+</p>
+
+<!-- Mahabaleshwar -->
+
+<div class="destination">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<h2>Mahabaleshwar</h2>
+
+<p>
+
+A beautiful hill station famous for strawberry farms, scenic viewpoints,
+waterfalls, and pleasant weather throughout the year.
+
+</p>
+
+<h3>Top Attractions</h3>
+
+<ul>
+
+<li>Arthur Seat Point</li>
+
+<li>Venna Lake</li>
+
+<li>Mapro Garden</li>
+
+<li>Elephant's Head Point</li>
+
+<li>Lingmala Waterfall</li>
+
+</ul>
+
+<span class="time">Best Time: October – June</span>
+
+<br>
+
+<a href="#" class="btn">Explore Destination</a>
+
+</div>
+
+</div>
+
+<!-- Goa -->
+
+<div class="destination">
+
+<div>
+
+<h2>Goa</h2>
+
+<p>
+
+India's beach paradise offering golden beaches, exciting nightlife,
+Portuguese architecture, water sports and delicious seafood.
+
+</p>
+
+<h3>Top Attractions</h3>
+
+<ul>
+
+<li>Baga Beach</li>
+
+<li>Calangute Beach</li>
+
+<li>Fort Aguada</li>
+
+<li>Dudhsagar Waterfalls</li>
+
+<li>Basilica of Bom Jesus</li>
+
+</ul>
+
+<span class="time">Best Time: November – February</span>
+
+<br>
+
+<a href="#" class="btn">Explore Destination</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+<!-- Ladakh -->
+
+<div class="destination">
+
+<img src="https://images.unsplash.com/photo-1593181629936-11c609b8db9b?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<h2>Ladakh</h2>
+
+<p>
+
+Known for breathtaking mountains, monasteries,
+adventure biking routes and crystal-clear lakes.
+
+</p>
+
+<h3>Top Attractions</h3>
+
+<ul>
+
+<li>Pangong Lake</li>
+
+<li>Nubra Valley</li>
+
+<li>Khardung La Pass</li>
+
+<li>Magnetic Hill</li>
+
+<li>Leh Palace</li>
+
+</ul>
+
+<span class="time">Best Time: May – September</span>
+
+<br>
+
+<a href="#" class="btn">Explore Destination</a>
+
+</div>
+
+</div>
+
+<!-- Ajanta & Ellora -->
+
+<div class="destination">
+
+<div>
+
+<h2>Ajanta & Ellora Caves</h2>
+
+<p>
+
+UNESCO World Heritage Sites showcasing magnificent ancient Buddhist,
+Hindu and Jain rock-cut caves with remarkable architecture and history.
+
+</p>
+
+<h3>Top Attractions</h3>
+
+<ul>
+
+<li>Ajanta Caves</li>
+
+<li>Ellora Caves</li>
+
+<li>Kailasa Temple</li>
+
+<li>Daulatabad Fort</li>
+
+<li>Bibi Ka Maqbara</li>
+
+</ul>
+
+<span class="time">Best Time: October – March</span>
+
+<br>
+
+<a href="#" class="btn">Explore Destination</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+<!-- Kerala -->
+
+<div class="destination">
+
+<img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<h2>Kerala</h2>
+
+<p>
+
+Known as "God's Own Country," Kerala offers serene backwaters,
+lush greenery, wildlife sanctuaries, tea plantations and beautiful beaches.
+
+</p>
+
+<h3>Top Attractions</h3>
+
+<ul>
+
+<li>Alleppey Backwaters</li>
+
+<li>Munnar Tea Gardens</li>
+
+<li>Kovalam Beach</li>
+
+<li>Thekkady</li>
+
+<li>Wayanad</li>
+
+</ul>
+
+<span class="time">Best Time: September – March</span>
+
+<br>
+
+<a href="#" class="btn">Explore Destination</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h2>Travigo Travel Website</h2>
+
+<p>
+Discover India's most beautiful destinations with comfort, safety and unforgettable experiences.
+</p>
+
+<br>
+
+<p><strong>Designed By</strong></p>
+
+<p>Vedantika Deshmukh</p>
+
+<p>Arvind Gavali College of Engineering, Satara</p>
+
+<p>Date : 29 June 2026</p>
+
+<br>
+
+<p>&copy; 2026 Travigo. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const cards=document.querySelectorAll(".destination");
+
+const observer=new IntersectionObserver(function(entries){
+
+entries.forEach(function(entry){
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+{
+threshold:0.2
+});
+
+cards.forEach(function(card){
+
+observer.observe(card);
+
+});
+
+const nav=document.querySelector("header");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>60){
+
+nav.style.background="#ffffff";
+nav.style.boxShadow="0 6px 18px rgba(0,0,0,.15)";
+
+}
+else{
+
+nav.style.background="#ffffff";
+nav.style.boxShadow="0 4px 12px rgba(0,0,0,.1)";
+
+}
+
+});
+
+const buttons=document.querySelectorAll(".btn");
+
+buttons.forEach(function(btn){
+
+btn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+alert("Thank you for choosing Travigo! Booking feature will be available on the Packages page.");
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
